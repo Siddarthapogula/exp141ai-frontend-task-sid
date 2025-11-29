@@ -1,16 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { SummaryCard } from "@/components/summary-card";
 import { ChevronRight, Filter, Home, Plus } from "lucide-react";
+import { BillsTable } from "@/components/bills-table";
+import { summaryData } from "@/lib/data";
 
 export default function Page() {
-  const summaryData = [
-    { title: "Electric", amount: "£1,867.94", type: "electric" as const },
-    { title: "Water", amount: "£267.94", type: "water" as const },
-    { title: "Gas", amount: "£467.94", type: "gas" as const },
-    { title: "Internet", amount: "£67.94", type: "internet" as const },
-    { title: "Mobile", amount: "£137.94", type: "mobile" as const },
-  ];
-
   return (
     <div className="space-y-8 pb-10">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
@@ -70,8 +64,8 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="pt-8 text-center text-sm text-muted-foreground">
-        [Table Component Will Go Here]
+      <div className="pt-4">
+        <BillsTable />
       </div>
     </div>
   );

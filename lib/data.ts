@@ -1,0 +1,75 @@
+import { Bill } from "./types";
+
+export const bills: Bill[] = [
+  {
+    id: "1",
+    company: "SmartestEnergy Business Ltd.",
+    type: "Electric",
+    amount: "£769.70",
+    status: "Correct",
+    billingPeriod: "01/07/2025 - 31/07/2025",
+    billDate: "02/08/2025",
+  },
+  {
+    id: "2",
+    company: "SmartestEnergy Business Ltd.",
+    type: "Gas",
+    amount: "£769.70",
+    status: "Disputed",
+    billingPeriod: "01/07/2025 - 31/07/2025",
+    billDate: "02/08/2025",
+  },
+  {
+    id: "3",
+    company: "SmartestEnergy Business Ltd.",
+    type: "Water",
+    amount: "£769.70",
+    status: "Correct",
+    billingPeriod: "01/07/2025 - 31/07/2025",
+    billDate: "02/08/2025",
+  },
+  {
+    id: "4",
+    company: "SmartestEnergy Business Ltd.",
+    type: "Electric",
+    amount: "£769.70",
+    status: "Correct",
+    billingPeriod: "01/07/2025 - 31/07/2025",
+    billDate: "02/08/2025",
+  },
+  {
+    id: "5",
+    company: "SmartestEnergy Business Ltd.",
+    type: "Mobile",
+    amount: "£769.70",
+    status: "Correct",
+    billingPeriod: "01/07/2025 - 31/07/2025",
+    billDate: "02/08/2025",
+  },
+  {
+    id: "6",
+    company: "SmartestEnergy Business Ltd.",
+    type: "Internet",
+    amount: "£769.70",
+    status: "Disputed",
+    billingPeriod: "01/07/2025 - 31/07/2025",
+    billDate: "02/08/2025",
+  },
+  {
+    id: "7",
+    company: "SmartestEnergy Business Ltd.",
+    type: "Water",
+    amount: "£769.70",
+    status: "Correct",
+    billingPeriod: "01/07/2025 - 31/07/2025",
+    billDate: "02/08/2025",
+  },
+];
+
+export const summaryData = [
+  { title: "Electric", amount: "£1,867.94", type: "electric" as const },
+  { title: "Water", amount: "£267.94", type: "water" as const },
+  { title: "Gas", amount: "£467.94", type: "gas" as const },
+  { title: "Internet", amount: "£67.94", type: "internet" as const },
+  { title: "Mobile", amount: "£137.94", type: "mobile" as const },
+];
