@@ -24,7 +24,6 @@
   --color-chart-2: var(--chart-2);
   --color-chart-1: var(--chart-1);
   
-  /* --- STANDARD SHADCN MAPPINGS --- */
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -84,8 +83,8 @@
   --badge-water-bg: #dbeafe;
   --badge-water-text: #1d4ed8;
 
-  --badge-gas-bg: #e0e7ff;
-  --badge-gas-text: #4338ca;
+  --badge-gas-bg: #F1F5F9;   
+  --badge-gas-text: #475569;
 
   --badge-internet-bg: #f3e8ff;
   --badge-internet-text: #7e22ce;
