@@ -18,21 +18,18 @@ import {
   SidebarMenuItem,
   SidebarRail,
 } from "@/components/ui/sidebar";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props}>
       <SidebarHeader className="h-16 border-b border-sidebar-border/10">
-        <div className="flex items-center gap-2 px-2 py-2">
-          <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-yellow-400 text-sidebar-primary-foreground">
-            {/* Simple Logo Placeholder */}
-            <Receipt className="size-4 text-black" />
-          </div>
-          <div className="grid flex-1 text-left text-sm leading-tight">
-            <span className="truncate font-bold text-yellow-400">
-              TRANSLATE-A-BILL
+        <div className="flex h-full items-center px-4">
+          <div className="relative flex items-center justify-center rounded-md bg-[#fbbf24] px-3 py-1.5 shadow-sm">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-[#312e81]">
+              Translate-A-Bill
             </span>
+            <div className="absolute -bottom-1 left-2 h-2.5 w-2.5 rotate-45 bg-[#fbbf24]" />
           </div>
         </div>
       </SidebarHeader>
@@ -84,7 +81,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             </SidebarMenuButton>
           </SidebarMenuItem>
 
-          {/* Separator line implicitly handled by spacing or border */}
           <div className="my-2 border-t border-sidebar-border/20" />
 
           {/* User Profile */}
@@ -94,10 +90,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
               <Avatar className="h-8 w-8 rounded-lg">
-                <AvatarImage src="/placeholder-user.jpg" alt="John Doe" />
-                <AvatarFallback className="rounded-lg text-black">
-                  JD
-                </AvatarFallback>
+                <AvatarImage src="/user.jpg" alt="John Doe" />
               </Avatar>
               <div className="grid flex-1 text-left text-sm leading-tight">
                 <span className="truncate font-semibold">John Doe</span>
@@ -110,7 +103,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarFooter>
-      {/* this can be added, like in the larger screen i feel annoyed so i am commenting this out. as we have hamburger btn on smaller screens*/}
+      {/* this can be added, like in the larger screen it did'nt feel good, so i am commenting this out. as we have hamburger btn on smaller screens*/}
       {/* <SidebarRail /> */}
     </Sidebar>
   );

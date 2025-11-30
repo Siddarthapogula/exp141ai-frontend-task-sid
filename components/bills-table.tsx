@@ -29,33 +29,10 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import { cn } from "@/lib/utils";
-import { Bill, BillStatus, BillType } from "@/lib/types";
+import { Bill } from "@/lib/types";
 import { bills } from "@/lib/data";
 import { useMemo, useState } from "react";
-
-const getTypeStyles = (type: BillType) => {
-  switch (type) {
-    case "Electric":
-      return "bg-orange-100 text-orange-700 border-orange-200";
-    case "Water":
-      return "bg-blue-100 text-blue-700 border-blue-200";
-    case "Gas":
-      return "bg-slate-100 text-slate-600 border-slate-200";
-    case "Internet":
-      return "bg-purple-100 text-purple-700 border-purple-200";
-    case "Mobile":
-      return "bg-pink-100 text-pink-700 border-pink-200";
-    default:
-      false;
-      return "bg-gray-100 text-gray-700";
-  }
-};
-
-const getStatusStyles = (status: BillStatus) => {
-  if (status === "Correct") return "bg-emerald-100 text-emerald-700";
-  if (status === "Disputed") return "bg-red-100 text-red-700";
-  return "";
-};
+import { STATUS_STYLES, TYPE_STYLES } from "@/lib/constants";
 
 const parseCurrency = (value: string) => {
   return parseFloat(value.replace(/[^0-9.-]+/g, ""));
@@ -192,7 +169,7 @@ export function BillsTable() {
                     <span
                       className={cn(
                         "inline-flex items-center px-2.5 py-0.5 rounded border text-xs font-medium",
-                        getTypeStyles(bill.type)
+                        TYPE_STYLES[bill.type]
                       )}
                     >
                       {bill.type}
@@ -206,7 +183,7 @@ export function BillsTable() {
                       <span
                         className={cn(
                           "inline-flex items-center px-2 py-0.5 text-xs rounded-full font-medium tracking-wide",
-                          getStatusStyles(bill.status)
+                          STATUS_STYLES[bill.status]
                         )}
                       >
                         {bill.status}

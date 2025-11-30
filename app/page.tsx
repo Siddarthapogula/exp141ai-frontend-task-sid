@@ -23,13 +23,16 @@ export default function Page() {
             Check how much you spent and all individual bills
           </p>
         </div>
-        {/* buttons, need to change the background thing, for add new bill button. */}
-        <div className="flex items-center gap-2">
-          <Button variant="outline" className="bg-white">
+        <div className="flex items-center gap-3">
+          <Button
+            variant="outline"
+            className="h-10 rounded-lg border-slate-200 bg-white px-4 font-semibold text-slate-700 shadow-sm hover:bg-slate-50 hover:text-slate-900"
+          >
             My Suppliers
           </Button>
-          <Button className="bg-brand-purple hover:bg-brand-purple/90 text-white">
-            <Plus className=" size-4" />
+
+          <Button className="h-10 rounded-lg bg-linear-to-r from-[#5819bc] to-[#7448dc] px-4 font-semibold text-white shadow-md hover:from-[#5b21b6] hover:to-[#7c3aed]">
+            <Plus className=" size-5" />
             Add New Bill
           </Button>
         </div>

@@ -10,3 +10,4 @@ export interface Bill {
 
 export type BillStatus = "Correct" | "Disputed";
 export type BillType = "Electric" | "Water" | "Gas" | "Internet" | "Mobile";
+export type CardType = "electric" | "water" | "gas" | "internet" | "mobile";
