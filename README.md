@@ -42,3 +42,6 @@
 
 - The application operates with client-side data (no API backend required for this task)
 - Mobile navigation uses a sidebar that can be toggled for better space utilization
+
+- demo video drive link : https://drive.google.com/file/d/1ZL0XoAN288SjD7-8LpCzlwWo5xLaB0MN/view?usp=sharing
+  
